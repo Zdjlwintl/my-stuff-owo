@@ -1,3 +1,9 @@
+/* I actually uploaded an image of this on a youtube post of mine when I originally finished it xd
+basically it was for a short assignment where we had to write code to demonstrate linear search and I decided to use that opportunity to write this:
+my first actual program in c++ hehe X3
+
+Finished on: 02/10/26
+*/
 #include <iostream>
 using namespace std;
 

@@ -1,4 +1,12 @@
-// Begun on 17:50
+/* Begun on 17:50
+Today is 02/19/26
+
+This was done for another homework question that totally absolutely required me to use C++ but I just went with it anyway xd
+I didn't really bother with the type validation so long as the specific logic I needed was there :p
+I also took this opportunity to practise getting used to using classes hehe :3
+by the way this didn't actually take me 3 hours straight I did take a break for at least almost an hour so ye lul >.<
+*/
+
 #include <iostream>
 #include <cmath>
 
@@ -71,3 +79,5 @@ int main(){
 	} while (true);
 }
 // 18:46
+
+// Final change at 20:45

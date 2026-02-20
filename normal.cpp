@@ -1,4 +1,10 @@
-// 10:41
+/* 10:41
+Today is 02/20/26
+So I had some math homework about normal distribution and thought Hey maybe I should write some code to help me
+so I don't need to keep checking against The Table. and thus this was born.
+Hardcoded for the specific questions I needed to answer lol, also I didn 't make the inverse function myself
+cuz I didn't want to worry so much about it lol.
+*/
 
 #include <iostream>
 #include <cmath>
@@ -98,7 +104,6 @@ int main() {
 				P(Z < q) = S - k;
 
 				q = P^-1(S-k);
-
 	*/
 		
 	double z1[] = { 0.567, 2.468, 1.53, 0.077, -0.817, -2.009, -1.75, -0.013, 1.96, -2.576 };
@@ -170,5 +175,4 @@ int main() {
 	}
 	return 0;
 }
-
 // 11:01

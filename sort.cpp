@@ -1,3 +1,10 @@
+/* Today is 02/24/26
+I made this for classwork that totally absolutely required me to write in C++ :3
+but uh yeah it's just a simple bubble sort, the usual :p
+decided to do this by making a sort function that used the array as a pointer because i suck at using pointers,
+so i thought this 'd be a good practice for them lel.
+*/
+
 #include <iostream>
 using namespace std;
 

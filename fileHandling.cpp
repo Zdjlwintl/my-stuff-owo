@@ -1,3 +1,8 @@
+/* Today is 02/25/26
+we were learning about file handling so i did a simple assignment for it in C++ xd
+might have to learn java some time thoug..
+*/
+
 #include <fstream>
 #include <iostream>
 #include <string>

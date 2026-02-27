@@ -1,3 +1,14 @@
+/* Finished at 21:00; today is 02/27/26
+
+Welcome to my first actual java program!! :3
+this is basically just sort.cpp, just with a different array and different Language.
+
+at some point or another i need to myself into using java,
+because i'm not actually allowed to use C++ during like actual exams (idk blame the syllabus x_x)
+if i wanted to i could've just as easily switched back to python but,,
+by this point i'm so disjointed from it i might as well learn the closest thing to C/C++ that i'm allowed to use :p
+*/
+
 public class sort { 
 	public static void main(String[] args) {
 		int arr[] = {38, 25, 33, 51, 87, 19};

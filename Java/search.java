@@ -1,3 +1,9 @@
+/* Today is 02/28/26
+This is basically the same as the first C++ program i wrote, just in java now :3
+it's quite interesting though how you need to call new in order to create a variable of class Scanner,
+and then you Still need a variable to actually store input ;w;
+*/
+
 import java.util.Scanner;
 
 public class search {

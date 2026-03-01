@@ -1,3 +1,8 @@
+/* Finished on 22:31, today is 03/01/26
+learning basic file handling in java, this is basically identical to fileHandling.cpp xd
+i am learning a lot :3
+*/
+
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Scanner;

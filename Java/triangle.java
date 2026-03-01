@@ -1,5 +1,5 @@
 /* Finished on 21:26, today is 03/01/26
-so it's kinda the same as the one i made in C++, i just wanted to learn about using classes lel :p
+so it's a much smaller version of the one i made in C++, i just wanted to learn about using classes in java lel :p
 */
 
 import java.util.Scanner;

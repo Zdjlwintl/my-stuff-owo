@@ -1,5 +1,9 @@
-// 12:12
-
+/* Begun on 12:12, ended 12:50; today is 03/04/26
+This is a little calculator made for normal distribution calculations to make my life easier xd
+the issue is the table on my book specifically uses 3 decimal places for the z-score,
+and 4 decimal places for the probabilities.
+at worst though i'd be off by +- 0.001 or +- 0.0001 lol
+*/
 #include <iostream>
 #include <cmath>
 
@@ -107,3 +111,5 @@ int main() {
 	}
 	return 0;
 }
+
+// 12:50

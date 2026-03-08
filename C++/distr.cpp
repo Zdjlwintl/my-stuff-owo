@@ -3,6 +3,11 @@ This is a little calculator made for normal distribution calculations to make my
 the issue is the table on my book specifically uses 3 decimal places for the z-score,
 and 4 decimal places for the probabilities.
 at worst though i'd be off by +- 0.001 or +- 0.0001 lol
+
+today is 03/08/26, finished editing at 21:18
+well. i tried to make the probabilities and z values to 4 and 3 d.p. respectively, kinda not the best idea since Lol,
+also it took me so long to realise it asked for var yet divided (x - mean) by variance LOL,
+so i decided to just add an extra input to ask to use variance or stdev (cuz i'm the one most likely to actually use this xd)
 */
 #include <iostream>
 #include <cmath>
@@ -61,55 +66,82 @@ double inverse(double p) {
     }
 }
 
+double roundTo(double value, int places) {
+        return round(pow(10, places) * value) / pow(10, places);
+}
+
+double z_val(char mode) {
+        double x, m, std;
+        if (mode == 's') {
+                cout << "Enter the values of x, mean and stdev: " << flush;
+                cin >> x >> m >> std;
+        } else if (mode == 'v') {
+                cout << "Enter the values of x, mean and var: " << flush;
+                cin >> x >> m >> std;
+                std = sqrt(std);
+        }
+        else { return 1; }
+        return roundTo((x - m)/std, 3);
+}
 void option1() {
-	double x, m, var;
-	cout << "Enter the values of x, mean and variance: " << flush;
-	cin >> x >> m >> var;
-	double z = (x - m)/var;
-	cout << "P(Z < " << z << ") = " << cdf(z) << endl;
+        char mode;
+        cout << "Using var [v] or stdev [s]? " << flush;
+        cin >> mode;
+        double z = z_val(mode);
+        cout << "P(Z < " << z << ") = " << roundTo(cdf(z), 4) << endl;
 }
 
 void option2() {
-	double x, m, var;
-	cout << "Enter the values of x, mean and variance: " << flush;
-	cin >> x >> m >> var;
-	double z = (x - m)/var;
-	cout << "P(Z > " << z << ") = 1 - P(Z < " << z << ") = " << 1 - cdf(z) << endl;
+        char mode;
+        cout << "Using var [v] or stdev [s]? " << flush;
+        cin >> mode;
+        double z = z_val(mode);
+        cout << "P(Z > " << z << ") = 1 - P(Z < " << z << ") = " << roundTo(cdf(-z), 4) << endl;
 }
 
 void option3() {
-	double xUpper, xLower, m, var;
-	cout << "Enter the values of the lower bound of x, upper bound of x, mean and variance: " << flush;
-	cin >> xLower >> xUpper >> m >> var;
-	double zUpper = (xUpper - m)/var;
-	double zLower = (xLower - m)/var;
-	cout << "P(" << zLower << " < Z < " << zUpper << ") = " << cdf(zUpper) - cdf(zLower) << endl;
+        double xUpper, xLower, m, std;
+        char mode;
+        cout << "Using var [v] or stdev [s]? " << flush;
+        cin >> mode;
+        if (mode == 's') {
+                cout << "Enter the values of the lower bound of x, upper bound of x, mean and stdev: " << flush;
+                cin >> xLower >> xUpper >> m >> std;
+        } else if (mode == 'v') {
+                cout << "Enter the values of the lower bound of x, upper bound of x, mean and var: " << flush;
+                cin >> xLower >> xUpper >> m >> std;
+                std = sqrt(std);
+        }
+        double zUpper = roundTo((xUpper - m)/std, 3);
+        double zLower = roundTo((xLower - m)/std, 3);
+
+        cout << "P(" << zLower << " < Z < " << zUpper << ") = " << roundTo(cdf(zUpper), 4) - roundTo(cdf(zLower), 4) << endl;
 }
 
 void option4() {
-	double Fz;
-	cout << "Enter value of Fi(z): " << flush;
-	cin >> Fz;
-	if (Fz >= 0.5) {
-		cout << "Fi^-1(" << Fz << ") = " << inverse(Fz) << endl;
-	} else {
-		cout << "Fi^-1(" << Fz << ") = - Fi^-1(" << 1 - Fz << ") = " << -(inverse(1-Fz)) << endl;
-	}
+        double Fz;
+        cout << "Enter value of Fi(z): " << flush;
+        cin >> Fz;
+        if (Fz >= 0.5) {
+                cout << "Fi^-1(" << Fz << ") = " << inverse(Fz) << endl;
+        } else {
+                cout << "Fi^-1(" << Fz << ") = - Fi^-1(" << 1 - Fz << ") = " << -(inverse(1-Fz)) << endl;
+        }
 }
 int main() {
-	int option;
-	
-	cout << "Enter an option:\n1. Normal CDF P(X < x)\n2. Normal CDF P(X > x)\n3. Ranged CDF P(xUpper < X < xLower)\n4. Inverse CDF Fi^-1" << endl;
-	cin >> option;
+        int option;
 
-	switch (option) {
-		case 1: option1(); break;
-		case 2: option2(); break;
-		case 3: option3(); break;
-		case 4: option4(); break;
-		default: cout << "Invalid option." << endl;
-	}
-	return 0;
+        cout << "Enter an option:\n1. Normal CDF P(X < x)\n2. Normal CDF P(X > x)\n3. Ranged CDF P(xUpper < X < xLower)\n4. Inverse CDF Fi^-1" << endl;
+        cin >> option;
+
+        switch (option) {
+                case 1: option1(); break;
+                case 2: option2(); break;
+                case 3: option3(); break;
+                case 4: option4(); break;
+                default: cout << "Invalid option." << endl;
+        }
+        return 0;
 }
 
 // 12:50

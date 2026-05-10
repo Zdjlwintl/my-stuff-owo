@@ -1,3 +1,9 @@
+/* 05/10/26
+been quite a while owo
+this is a simple push n pop stack operation, i might at some point in time make it so that it loops so that you could
+push and pop continuously but for now this will suffice :3
+*/
+
 import java.util.Scanner;
 
 public class stack {

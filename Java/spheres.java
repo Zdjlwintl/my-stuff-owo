@@ -1,5 +1,10 @@
 import java.util.Scanner;
-// 08:48
+/* 08:48
+Today is 05/21/26 but I actually started this for part of a thing i wanted to do in the middle of class,
+i'm pretty sure it was the morning of 04/08/26 when i actually began this xd
+today i like randomly discovered this file in my home folder and decided to just finish it :p
+(done 21:44)
+*/
 public class spheres {
 	public static double radius;
 	public static void inputRadius() {

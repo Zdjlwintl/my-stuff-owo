@@ -1,4 +1,15 @@
-// 10:09
+/* 10:09
+sooo little story, last night i was talking with a friend of mine about finals and stuff, and she talked about how
+she had to take like python courses for her major (one that isn't related to stem lol) and brought up a particular
+question that she struggled the most with, which in essence is to write a function takes in an array and returns
+two separate arrays where each element is every other element;
+i.e. [1, 2, 3, 4, 5, 6] is split up to [1, 3, 5] and [2, 4, 6]
+this was more or less like my very first thought into approaching this, obviously it can be done a lot better,
+and yeah this attempt is cheating cuz i didn't actually write a function (not yet at least),
+I mean I tried to at first but I think I didn't work out the memory management right
+because my function returned a pointer to an array of pointers to the newlist arrays which i didn't actually realise would
+all dissipate outside the function LOL (give me a break i first tried this at like 11 in the evening last night lmao)
+*/
 #include <cmath>
 #include <iostream>
 using namespace std;

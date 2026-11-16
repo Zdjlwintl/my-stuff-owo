@@ -1,3 +1,8 @@
+/* 11/16/26
+been a whileee awaa but hey, my first arduino project :3
+not actually even my own arduino, i was just lent it to try out on my own hehe >.<
+*/
+
 #include <Servo.h>
 Servo servo;
 
